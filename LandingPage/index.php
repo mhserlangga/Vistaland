@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,7 +27,7 @@
 
       <div class="navbar-extra">
         <div class="user">
-          <a href="../Login/login.html">
+          <a href="../Login/login.php">
             <img src="../icon/user.svg" alt="" />
           </a>
         </div>
@@ -43,7 +47,10 @@
     <section class="hero" id="home">
       <main class="content">
         <img src="../img//Logo/logo-1.png" alt="" />
-        <h1>Selamat Datang</h1>
+        <h1>
+          Selamat Datang
+          <?= $_SESSION["username"]?>
+        </h1>
         <p>
           Vistaland adalah tempat ideal bagi anda yang menginginkan hidup lebih
           baik
@@ -210,7 +217,7 @@
     <!-- Spek Section End -->
 
     <!-- Location Section Start -->
-    <div class="loc" id="loc">
+    <section class="loc" id="loc">
       <h1>Lokasi Perumahan</h1>
       <div class="row">
         <div class="map">
@@ -243,7 +250,78 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Location Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="content">
+        <div class="desc">
+          <img src="../img/Logo/logo-2.png" alt="" />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
+            deserunt id officiis dolore magni laboriosam libero totam impedit!
+            Optio, reiciendis.
+          </p>
+        </div>
+
+        <div class="contact">
+          <h5>Our Contact</h5>
+
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="white"
+              class="bi bi-whatsapp"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+              />
+            </svg>
+            <p>Admin 087860087009</p>
+          </a>
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="white"
+              class="bi bi-whatsapp"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+              />
+            </svg>
+            <p>Sales 087860087009</p>
+          </a>
+          <a href="">
+            <img src="../icon/mail.svg" alt="" />
+            <p>info@vistaland.co.id</p>
+          </a>
+        </div>
+
+        <div class="social">
+          <h5>Social Media</h5>
+
+          <div class="icon">
+            <a href=""> <img src="../icon/instagram.svg" alt="" /> </a>
+            <a href=""> <img src="../icon/facebook.svg" alt="" /> </a>
+            <a href=""> <img src="../icon/linkedin.svg" alt="" /> </a>
+            <a href=""> <img src="../icon/youtube.svg" alt="" /> </a>
+          </div>
+          <a href="">
+            <p>Contact Us</p>
+          </a>
+        </div>
+      </div>
+      <div class="credit">
+        <p>© 2024 vistaland.co.id by PT Geda Gedi. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
   </body>
 </html>

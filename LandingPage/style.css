@@ -324,7 +324,6 @@ body {
   flex: 1 1 30rem;
   justify-content: center;
   align-items: center;
-  /* background-color: yellowgreen; */
 }
 
 .loc .row .info {
@@ -346,4 +345,85 @@ body {
 .loc .row .info p {
   font-size: 1.2rem;
   margin: 1.5rem 1rem;
+}
+
+footer {
+  background-color: var(--secondary);
+}
+
+footer .content {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 1%;
+}
+
+footer .desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+}
+
+footer .desc img {
+  height: 6rem;
+}
+
+footer .desc p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+footer .contact h5,
+footer .social h5 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+footer .contact a {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+footer .contact a:hover,
+footer .social p:hover {
+  background-color: var(--h-sec);
+  border-radius: 0.5rem;
+}
+
+footer .social .icon {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+footer .social .icon a {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+footer .social .icon a:hover {
+  background-color: var(--h-sec);
+  border-radius: 0.5rem;
+}
+
+footer .social p {
+  color: white;
+  text-align: center;
+  margin-top: 5rem;
+  padding: 0.5rem;
+}
+
+footer .credit {
+  text-align: center;
+  color: white;
+  padding: 0.7rem 0;
 }
