@@ -128,13 +128,13 @@ body {
 .navbar .account-box {
   position: absolute;
   top: 110%;
-  right: 9%;
+  right: 13%;
   background-color: white;
-  width: 18rem;
-  height: 5rem;
+  width: 10rem;
+  height: 5.4rem;
   display: none;
   justify-content: space-evenly;
-  font-size: 0.8rem;
+  flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   animation: animateBoxDown 0.5s;
@@ -155,28 +155,44 @@ body {
   }
 }
 
-.navbar .account-box .login,
-.navbar .account-box .signup {
+.navbar .account-box .profile,
+.navbar .account-box .logout {
   text-align: center;
   padding: 0.5rem 0;
 }
 
-.navbar .account-box .btn {
-  background-color: var(--secondary);
-  margin-top: 1rem;
+.navbar .account-box .btn-profile {
   font-size: 1rem;
-  padding: 0.3rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem;
   transition: 0.3s;
 }
 
-.navbar .account-box .btn:hover {
+.navbar .account-box .btn-logout {
+  background-color: var(--secondary);
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: 0.3s;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.navbar .account-box .btn-profile:hover {
+  transition: 0.3s;
+  background-color: var(--bg-grey);
+}
+
+.navbar .account-box .btn-logout:hover {
   background-color: var(--h-sec);
   transition: 0.3s;
 }
 
-.navbar .account-box .btn a {
+.navbar .account-box .btn-profile a {
+  color: black;
+}
+.navbar .account-box .btn-logout button {
   color: white;
+  background-color: var(--secondary);
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* Hero Section */

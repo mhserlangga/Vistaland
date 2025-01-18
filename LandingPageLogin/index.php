@@ -1,5 +1,10 @@
 <?php
   session_start();
+  if(isset($_POST['logout'])) {
+    session_unset();
+    session_destroy();
+    header('location: ../LandingPage/index.php');
+  }
 ?>
 
 <!DOCTYPE html>
@@ -43,18 +48,16 @@
 
       <!-- Account Box Start -->
       <div class="account-box">
-        <div class="login">
-          <p>Sudah Punya Akun?</p>
-          <div class="btn">
-            <p><a href="../Login/login.php">Login</a></p>
+        <div class="profile">
+          <div class="btn-profile">
+            <p><a href="../Profile/profile.html">Profile</a></p>
           </div>
         </div>
-        <div class="signup">
-          <p>Belum Punya Akun?</p>
-          <div class="btn">
-            <p><a href="../SignUp/signup.php">Signup</a></p>
+        <form action="index.php" method="POST" class="logout">
+          <div class="btn-logout">
+            <button type="submit" name="logout">Logout</button>
           </div>
-        </div>
+        </form>
       </div>
       <!-- Account Box End -->
     </nav>
@@ -66,7 +69,7 @@
         <img src="../img//Logo/logo-1.png" alt="" />
         <h1>
           Selamat Datang
-          <!-- <?= $_SESSION["username"]?> -->
+          <?= $_SESSION["username"]?>
         </h1>
         <p>
           Vistaland adalah tempat ideal bagi anda yang menginginkan hidup lebih

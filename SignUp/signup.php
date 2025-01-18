@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
   // memanggil file database
   include "../Service/database.php";
@@ -28,7 +28,7 @@
     header("location:../LandingPage/index.php");
   }
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +89,7 @@
           </div> -->
           <button type="submit" class="btn" name="signup">Sign Up</button>
           <p class="login-link">
-            Sudah punya akun? <a href="../Login/login.php">Log in di sini</a>
+            Sudah punya akun? <a href="../Login/login.php">Login di sini</a>
           </p>
         </form>
       </div>

@@ -14,28 +14,27 @@
 
     // eksekusi query
     $result = $db -> query($sql);
-
+    
     // jika hasil query lebih dari 0 (berarti ada data yang sesuai)
     if($result -> num_rows > 0){
       // ambil data user yang sesuai
       $data = $result -> fetch_assoc();
+      
       // mengalihkan halaman ke landing page ketika login berhasil
-      header("location: ../LandingPage/index.php");
-
+      header("location: ../LandingPageLogin/index.php");
+      
       // membuat session username dan is_login
       $_SESSION['username'] = $data['username'];
       $_SESSION['is_login'] = true;
-
     } else {
       echo "Login Gagal";
     }
   }
-
+  
   // jika user sudah login, maka akan diarahkan ke landing page dan tidak bisa login lagi
   if(isset($_SESSION['is_login'])){
-    header("location:../LandingPage/index.php");
+    header("location:../LandingPageLogin/index.php");
   }
-
 ?>
 
 <!DOCTYPE html>

@@ -1,6 +1,21 @@
+:root {
+  --secondary: #730046;
+  --bg-grey: rgba(225, 225, 225, 0.603);
+  --h-sec: #5a0038;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Login Page Styling */
 .login {
-  min-height: 98vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +47,7 @@
 .login-container .logo img {
   width: 23rem;
   margin: 0;
+  padding-bottom: 1rem;
 }
 
 .login-form .form-group {
@@ -43,7 +59,7 @@
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #730046;
+  color: var(--secondary);
 }
 
 .login-form input {
@@ -57,7 +73,7 @@
   display: block;
   width: 100%;
   padding: 0.8rem;
-  background: #5a0038;
+  background: var(--secondary);
   color: #fff;
   font-weight: bold;
   border: none;
@@ -66,7 +82,7 @@
 }
 
 .login-form .btn:hover {
-  background: #730046;
+  background: var(--h-sec);
 }
 
 .signup-link {
