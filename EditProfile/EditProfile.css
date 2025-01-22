@@ -1,0 +1,106 @@
+:root {
+    --secondary: #730046;
+    --bg-grey: rgba(225, 225, 225, 0.603);
+    --h-sec: #5a0038;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .EditProfile {
+    min-height: 100vh;
+    display:flow-root;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/rumah/house.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .container {
+    background-color: #FFFFFF;
+    max-width: 800px;
+    margin: 2rem auto;
+    border: 2px solid var(--secondary);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  .profile-header {
+    background-color: #5a0038;
+    border-radius: 10px;
+    color: var(--secondary);
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .profile-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-grey);
+    margin-bottom: 1rem;
+    background-color: #FFFFFF;
+  }
+  
+
+  
+  .profile-details {
+    padding: 2rem;
+  }
+  
+  .profile-details h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-details .info input{
+    width: 80%;
+    padding: 0.7rem;
+    border: 1px solid var(--h-sec);
+    border-radius: 4px;
+  }
+  
+  .profile-details .info strong {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-container a {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    transition: background 0.5s ease;
+  }
+  
+  .btn-container a:hover {
+    background-color: var(--secondary);
+    color: #FFFFFF;
+  }
+  
