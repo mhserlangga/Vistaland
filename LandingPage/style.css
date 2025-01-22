@@ -304,7 +304,7 @@ body {
 
 .tipe .row .tipe-content {
   flex: 1 1 30rem;
-  margin: 2rem;
+  margin: 0 3rem;
   margin-top: 0;
   padding-right: 5rem;
 }
@@ -318,7 +318,11 @@ body {
   font-size: 1.2rem;
 }
 
-.tipe .row .tipe-content .more-wrap {
+.tipe .row .tipe-content .fasilitas {
+  margin: 0 1rem;
+}
+
+/* .tipe .row .tipe-content .more-wrap {
   text-align: center;
   display: flex;
 }
@@ -333,7 +337,7 @@ body {
 }
 .tipe .row .tipe-content .more:hover {
   background-color: var(--h-sec);
-}
+} */
 
 /* Spek Section */
 .spek .desc {

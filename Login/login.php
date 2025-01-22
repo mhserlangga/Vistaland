@@ -21,7 +21,7 @@
       $data = $result -> fetch_assoc();
       
       // mengalihkan halaman ke landing page ketika login berhasil
-      header("location: ../LandingPageLogin/index.php");
+      header("location: ../Dashboard/dashboard.php");
       
       // membuat session username dan is_login
       $_SESSION['username'] = $data['username'];
@@ -33,7 +33,7 @@
   
   // jika user sudah login, maka akan diarahkan ke landing page dan tidak bisa login lagi
   if(isset($_SESSION['is_login'])){
-    header("location:../LandingPageLogin/index.php");
+    header("location:../Dashboard/dashboard.php");
   }
 ?>
 
