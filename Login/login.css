@@ -68,6 +68,11 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+/* 
+.message {
+  font-size: 0.8rem;
+  color: #666;
+} */
 
 .login-form .btn {
   display: block;

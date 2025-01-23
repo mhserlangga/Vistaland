@@ -4,6 +4,8 @@
   // memulai session
   session_start();
 
+  $login_message = "";
+
   // jika tombol login ditekan
   if(isset($_POST['login'])){
     $username = $_POST['username'];
@@ -18,19 +20,23 @@
     // jika hasil query lebih dari 0 (berarti ada data yang sesuai)
     if($result -> num_rows > 0){
       // ambil data user yang sesuai
-      $data = $result -> fetch_assoc();
-      
-      // mengalihkan halaman ke landing page ketika login berhasil
+      $data = $result ->fetch_assoc();
+      // mengalihkan halaman ke dashboard ketika login berhasil
       header("location: ../Dashboard/dashboard.php");
-      
       // membuat session username dan is_login
       $_SESSION['username'] = $data['username'];
+      $_SESSION['nama'] = $data['nama'];
+      $_SESSION['email'] = $data['email'];
+      $_SESSION['no_hp'] = $data['no_hp'];
+      $_SESSION['password'] = $data['password'];
+      $_SESSION['id'] = $data['id'];
+      $_SESSION['created_at'] = $data['created_at'];
       $_SESSION['is_login'] = true;
     } else {
-      echo "Login Gagal";
+      $login_message = "Username atau Password tidak ditemukan"; }
+      $db -> close();
     }
-  }
-  
+
   // jika user sudah login, maka akan diarahkan ke landing page dan tidak bisa login lagi
   if(isset($_SESSION['is_login'])){
     header("location:../Dashboard/dashboard.php");
@@ -60,7 +66,7 @@
               type="text"
               id="username"
               name="username"
-              placeholder="Enter your username"
+              placeholder="Masukkan username anda"
               required
             />
           </div>
@@ -70,7 +76,7 @@
               type="password"
               id="password"
               name="password"
-              placeholder="Enter your password"
+              placeholder="Masukkan password anda"
               required
             />
           </div>
@@ -80,6 +86,8 @@
             <a href="../SignUp/signup.php">Daftar di sini</a>
           </p>
         </form>
+        <br />
+        <i><?= $login_message ?></i>
       </div>
     </section>
   </body>
