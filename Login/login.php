@@ -11,6 +11,14 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    // Jika login sebagai admin
+    if ($username == "admin" && $password == "admin123") {
+      $_SESSION['username'] = "admin";
+      $_SESSION['is_admin'] = true;
+      header('Location: ../admin/admin.php');
+      exit();
+    }
+
     // query untuk mencari username dan password yang sesuai pada database
     $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 

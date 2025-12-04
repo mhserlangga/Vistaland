@@ -4,7 +4,7 @@
   if(isset($_POST['logout'])) {
     session_unset();
     session_destroy();
-    header('location: ../LandingPage/index.php');
+    header('location: ../index.php');
   }
 ?>
 

@@ -34,7 +34,7 @@
 
   // jika user sudah login, maka akan diarahkan ke landing page dan tidak bisa signup lagi
   if(isset($_SESSION['is_login'])){
-    header("location:../LandingPage/index.php");
+    header("location: ../index.php");
   }
 
 ?>
